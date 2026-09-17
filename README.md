@@ -19,7 +19,7 @@ This repository contains the prototype for **Assignment 2: Internal Service Agen
 flowchart TD
     %% Entities
     U([Employee]) -->|Natural Language Request| UI[Streamlit UI]
-    UI -->|Forwards Request| A{LangGraph ReAct Agent\n(Gemini 3.6 Flash)}
+    UI -->|Forwards Request| A{"LangGraph ReAct Agent<br/>(Gemini 3.6 Flash)"}
     
     %% Agent actions
     A -->|1. Missing Context?| T1[search_kb Tool]
@@ -45,7 +45,7 @@ flowchart TD
     UI --> U
     
     %% Database layer
-    subgraph Mock Database (data.py)
+    subgraph DB ["Mock Database (data.py)"]
         T1 --> KB[(IT Knowledge Base)]
         T2 --> TK[(Ticket History)]
         TC --> TK
